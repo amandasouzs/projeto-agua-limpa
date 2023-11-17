@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+
+:root {
+    --laranja: rgb(255, 170, 0);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+}
+
+h2 {
+    font-family: 'Klee One', cursive;
+    font-weight: bold;
+}
+
+/* Menu */
+.header {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--laranja);
+}
+
+.menu-toggle svg {
+    width: 4rem;
+    height: 4rem;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    background-color: var(--laranja);
+    font-weight: bolder;
+}
+
+.menu.active {
+    display: flex;
+}
+
+.menu ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 15px 0;
+    padding: 30px 20px;
+    text-align: center;
+    list-style: none;
+    font-family: 'Klee One', cursive;
+    font-weight: bolder;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Hero Banner */
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, .4) 100%, transparent), url(../img/background1.jpg);
+    background-size: cover;
+    color: white;
+}
+
+/* Conteúdo Principal */
+.main {
+    padding: 0 10px;
+}
+
+/* Seção Metas */
+#metas {
+    padding-top: 6rem;
+}
+
+.metas-ul {
+    list-style-type: '\1F4A7';
+}
+
+#metas iframe {
+    width: 100%;
+}
+
+/* Botão laranja */
+.btn-laranja {
+    display: inline-block;
+    background-color: var(--laranja);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-laranja:hover {
+    color: #fff;
+    background-color: rgb(165, 95, 42);
+}
+
+/* Seção Projeto */
+#projeto {
+    padding: 6rem 0;
+}
+
+#cisterna-vertical {
+    padding: 3rem 0 0 0;
+}
+
+#cisterna-vertical p {
+    font-family: 'Ubuntu Mono', monospace;
+    padding: 1rem 3rem 0;
+}
+
+/* Seção Contato */
+#contato {
+    padding: 6rem 0;
+}
+
+/* Rodapé */
+.footer-top {
+    background-color: rgb(195, 195, 195);
+}
+
+.footer-top ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-top li {
+    padding: 10px;
+}
+
+.footer-top a {
+    text-decoration: none;
+    color: rgb(1, 1, 176);
+}
+
+.footer-top a:hover {
+    font-weight: bold;
+}
+
+.footer-bottom {
+    background-color: var(--laranja);
+}
+
+/* Responsividade */
+@media screen and (min-width: 680px) {
+
+    /* Hero Banner */
+    .banner {
+        padding: 5rem 0;
+    }
+
+    /* Seção Metas */
+    #metas iframe {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    /* Hero Banner */
+    .banner {
+        padding: 8.5rem;
+    }
+
+    /* Menu */
+    .header {
+        padding: 0 1.5rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        position: relative;
+        top: 0;
+    }
+
+    .menu ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .menu li:hover {
+        color: white;
+        background-color: rgb(46, 146, 254);
+        border-radius: 1.5rem;
+    }
+
+    /* Seção Metas */
+    #metas a {
+        margin-right: 1rem;
+    }
+}
